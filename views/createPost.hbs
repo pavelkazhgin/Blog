@@ -1,0 +1,14 @@
+<form  method="post" action="/newPost">
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Tittle</label>
+    <input  class="form-control" id="exampleFormControlInput1" name="tittle" placeholder="enter title">
+  </div>
+  
+
+  <div class="form-group">
+    <label for="exampleFormControlinput1">Description</label>
+    <input class="form-control"  name="description" rows="3" placeholder="write description here"></input>
+  </div>
+  <input  type= "hidden" name="user_id" value={{user.id}}>
+  <button  type="submit" class="btn btn-warning mt-3">Create</button>
+</form>

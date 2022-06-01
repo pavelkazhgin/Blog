@@ -1,0 +1,21 @@
+<div class='container row' id="cardList">
+{{#each allPosts}}
+<div class="card m-1" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ this.tittle }}</h5>
+    <p class="card-text">{{ this.description }}</p>
+    <a href="#" class="card-link">{{this.User.name}}</a>
+    <input type="hidden" name="id" value ={{this.id}}>
+    <button id = "del" type="click" class=" card-link btn btn-primary" value={{this.id}}>Delete</button>
+    <button id = "edit" type="click" class="btn btn-primary" value={{this.id}}>Edit</button>
+  </div>
+</div>
+
+ 
+{{/each}}
+
+</div>
+
+
+
+<script src="/js/main.js"></script>

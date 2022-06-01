@@ -1,0 +1,37 @@
+<nav class="navbar navbar-expand-lg">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">BlogPost</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+     {{#if user}}
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/">My posts</a>
+        </li>
+         <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="/newPost">Create post</a>
+        </li>
+      </ul>
+     
+       <form  method="get" action="/profile" >
+        <button class="btn btn-outline-success" type="click">Привет, {{user.name}}!</button>
+      </form>
+      <form  method = "get" action="/logOut" id = "out"  >
+        <button type = 'submit' class="btn" style="margin: 0px 3px">Выход</button>
+      </form>
+      
+        {{else}}
+        <form id = "signUp" action="/signUp" method ="get">
+           <button class="btn btn-outline-success" type="submit" >Зарегистрироваться</button>
+        </form>
+         <form id = "signIn" action="/signIn" method ="get">
+           <button class="btn btn-outline-success" type="submit" >Залогиниться</button>
+        </form>
+
+        {{/if}}
+    </div>
+  </div>
+</nav>
